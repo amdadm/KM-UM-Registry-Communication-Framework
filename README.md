@@ -9,8 +9,8 @@ A Proof of Concept (POC) developed by me, focusing on simple and stable KM-UM co
 
 ## Disclaimer
 
-This project is provided for **educational and research purposes only**.  
-I do **not** condone malicious use.  
-Use responsibly and only in controlled environments.
+This project is for educational and research purposes only.
+I do not condone or support malicious use of this information.
+Use responsibly, in controlled environments, and at your own risk.
 
 ---

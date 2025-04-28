@@ -17,7 +17,7 @@ NTSTATUS DriverEntry( _In_ PDRIVER_OBJECT DriverObject, _In_ PUNICODE_STRING Reg
 
 	DbgPrintEx(0, 0, "Driver loaded!\n");
 
-	RtlInitUnicodeString(&RegistryKey, L"MyRegID");
+	RtlInitUnicodeString(&RegistryKey, L"RegKeyCommunicationTest");
 	auto Status = RegisterCallback(PEX_CALLBACK_FUNCTION(RegistryCallback), nullptr, &Cookie);
 	if (!NT_SUCCESS(Status))
 		return Status;

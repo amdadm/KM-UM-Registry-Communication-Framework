@@ -24,7 +24,7 @@ void RegistryRequest(uint32_t type, void* instruction) {
 
 	HKEY hKey = NULL;
 	void* Pointer = NULL;
-	char Code[30] = "MyRegID";
+	char Code[30] = "RegKeyCommunicationTest";
 	RegOpenKeyExA(HKEY_LOCAL_MACHINE, "Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers", 0, KEY_ALL_ACCESS, &hKey);
 
 	if (hKey != NULL && hKey != INVALID_HANDLE_VALUE) {

@@ -1,0 +1,16 @@
+# KM-UM-Registry-Communication-Framework
+## Secure framework for establishing communication between Kernel Mode (KM) and User Mode (UM) components through the Windows Registry.
+
+This project demonstrates a minimal and efficient approach for exchanging data between a user-mode application and a kernel-mode driver through registry operations.
+
+A Proof of Concept (POC) developed by me, focusing on simple and stable KM-UM communication by leveraging the Windows Registry as the communication channel.
+
+---
+
+## Disclaimer
+
+This project is provided for **educational and research purposes only**.  
+I do **not** condone malicious use.  
+Use responsibly and only in controlled environments.
+
+---

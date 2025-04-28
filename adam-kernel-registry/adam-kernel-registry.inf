@@ -1,0 +1,62 @@
+;
+; adam-kernel-registry.inf
+;
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = System ; TODO: specify appropriate Class
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider    = %ManufacturerName%
+CatalogFile = adam-kernel-registry.cat
+DriverVer   = ; TODO: set DriverVer in stampinf property pages
+PnpLockdown = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+adam-kernel-registry.sys = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName% = Standard,NT$ARCH$.10.0...16299 ; %13% support introduced in build 16299
+
+[Standard.NT$ARCH$.10.0...16299]
+%adam-kernel-registry.DeviceDesc% = adam-kernel-registry_Device, Root\adam-kernel-registry ; TODO: edit hw-id
+
+[adam-kernel-registry_Device.NT]
+CopyFiles = File_Copy
+
+[File_Copy]
+adam-kernel-registry.sys
+
+;-------------- Service installation
+[adam-kernel-registry_Device.NT.Services]
+AddService = adam-kernel-registry,%SPSVCINST_ASSOCSERVICE%, adam-kernel-registry_Service_Inst
+
+; -------------- adam-kernel-registry driver install sections
+[adam-kernel-registry_Service_Inst]
+DisplayName    = %adam-kernel-registry.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\adam-kernel-registry.sys
+
+[adam-kernel-registry_Device.NT.Wdf]
+KmdfService = adam-kernel-registry, adam-kernel-registry_wdfsect
+
+[adam-kernel-registry_wdfsect]
+KmdfLibraryVersion = $KMDFVERSION$
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+ManufacturerName = "<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "adam-kernel-registry Installation Disk"
+adam-kernel-registry.DeviceDesc = "adam-kernel-registry Device"
+adam-kernel-registry.SVCDESC = "adam-kernel-registry Service"

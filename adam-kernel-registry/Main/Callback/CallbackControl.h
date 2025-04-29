@@ -34,7 +34,7 @@ NTSTATUS RegistryCallback(PVOID callbackContext, PVOID arg1, PVOID arg2) {
     switch (Data->Type)
     {
         // Base Address
-        case 4: {
+        case 1: {
 
             auto ModuleInfo = PGetBaseAddressRequest(Data->Instruction);
         

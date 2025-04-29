@@ -10,6 +10,15 @@
 #include "Callback/CallbackControl.h"
 #include "Callback/Callback.h"
 
+/*____________________________________________________________________________________________________________
+Original Author: amdadm
+Github: https://github.com/amdadm
+License: See end of file
+kernel driver
+        Compile-time, Usermode + Kernelmode, high-performance kernel driver framework for C++11+
+                            *Not removing this part is appreciated*
+____________________________________________________________________________________________________________*/
+
 NTSTATUS DriverEntry( _In_ PDRIVER_OBJECT DriverObject, _In_ PUNICODE_STRING RegistryPath )
 {
 	UNREFERENCED_PARAMETER(DriverObject);

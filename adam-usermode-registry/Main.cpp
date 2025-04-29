@@ -2,6 +2,15 @@
 
 #include "Communication/Registry.h"
 
+/*____________________________________________________________________________________________________________
+Original Author: amdadm
+Github: https://github.com/amdadm
+License: See end of file
+kernel driver
+        Compile-time, Usermode + Kernelmode, high-performance kernel driver framework for C++11+
+                            *Not removing this part is appreciated*
+____________________________________________________________________________________________________________*/
+
 int main()
 {
 	ProcessPid = GetProcessID("Notepad.exe");

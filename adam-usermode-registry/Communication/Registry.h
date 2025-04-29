@@ -81,7 +81,7 @@ uint64_t GetBaseAddress() {
 	Request.ProcessId = ProcessPid;
 	Request.BaseAddress = 0;
 
-	RegistryRequest(4, &Request);
+	RegistryRequest(1, &Request);
 
 	return Request.BaseAddress;
 }

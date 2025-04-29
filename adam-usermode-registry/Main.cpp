@@ -2,13 +2,17 @@
 
 #include "Communication/Registry.h"
 
-/*____________________________________________________________________________________________________________
-Original Author: amdadm
-Github: https://github.com/amdadm
-kernel driver
-        Compile-time, Usermode + Kernelmode, high-performance kernel driver framework for C++11+
-                            *Not removing this part is appreciated*
-____________________________________________________________________________________________________________*/
+/*===============================================================================================
+  Project         : KM-UM-Registry-Communication-Framework
+
+  Original Author : amdadm
+  GitHub          : https://github.com/amdadm
+  Created         : 2025-04-28
+
+  Description     : Framework for establishing communication between Kernel Mode (KM) and User Mode (UM) components through the Windows Registry.
+
+  License         : MIT License
+===============================================================================================*/
 
 int main()
 {
